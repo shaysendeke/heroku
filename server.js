@@ -1,7 +1,8 @@
 console.log("app is loading")
 const express = require('express')
+require("dotenv").config()
 const app = express()
-const PORT = 8080
+const PORT = process.env.PORT
 
 app.get('*', (req, res) =>{
     res.send("hello world")
